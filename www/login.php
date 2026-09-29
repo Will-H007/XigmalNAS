@@ -219,8 +219,8 @@ $loginpagedata->
 				insIMG(['src' => '/images/lock.png','alt' => ''])->
 			pop()->
 			addDIV(['class' => 'loginpage-header-logo-right'])->
-				addA(['title' => sprintf('www.%s',get_product_url()),'href' => sprintf('https://www.%s',get_product_url()),'target' => '_blank','rel' => "noreferrer"])->
-					insIMG(['src' => '/images/login_logo.png','alt' => 'logo'])->
+			addA(['title' => 'Rider Company Limited','href' => 'https://rider.com.hk','target' => '_blank','rel' => "noreferrer"])-
+				insIMG(['src' => '/images/login_logo.png','alt' => 'Rider logo'])-
 		pop()->
 		addDIV(['class' => 'loginpage-header-hostname'])->
 			insDIV(['class' => 'loginpage-hostname'],system_get_hostname());
@@ -232,13 +232,13 @@ $loginpagedata->
 $loginpagedata->
 	addElement('footer',['class' => 'loginpage-footer'])->
 		push()->addDIV(['class' => 'loginpage-footer-item'])->
-			insA(['target' => '_blank','rel' => 'noreferrer','href' => 'https://www.xigmanas.com/forums/'],gettext('Forum'))->
-		last()->addDIV(['class' => 'loginpage-footer-item'])->
-			insA(['target' => '_blank','rel' => 'noreferrer','href' => 'https://www.xigmanas.com/wiki/doku.php'],gettext('Information & Manuals'))->
-		last()->addDIV(['class' => 'loginpage-footer-item'])->
-			insA(['target' => '_blank','rel' => 'noreferrer','href' => 'https://web.libera.chat/#xigmanas'],gettext('IRC XigmaNAS'))->
-		pop()->addDIV(['class' => 'loginpage-footer-item'])->
-			insA(['target' => '_blank','rel' => 'noreferrer','href' => 'https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=info%40xigmanas%2ecom&lc=US&item_name=XigmaNAS&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted'],gettext('Donate'));
+			insA(['target' => '_blank','rel' => 'noreferrer','href' => 'https://rider.com.hk/support'],gettext('Support'))-
+		last()->addDIV(['class' => 'loginpage-footer-item'])-
+			insA(['target' => '_blank','rel' => 'noreferrer','href' => 'https://rider.com.hk/docs'],gettext('Documentation'))-
+		last()->addDIV(['class' => 'loginpage-footer-item'])-
+			insA(['target' => '_blank','rel' => 'noreferrer','href' => 'https://rider.com.hk/contact'],gettext('Rider Support'))-
+		pop()->addDIV(['class' => 'loginpage-footer-item'])-
+			insA(['target' => '_blank','rel' => 'noreferrer','href' => 'https://rider.com.hk/contact'],gettext('Contact'));
 if(!empty($input_errors)):
 	$loginpagedata->
 		insDIV(['class' => 'loginpage-error'],$input_errors);
