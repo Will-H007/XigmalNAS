@@ -1,0 +1,48 @@
+XigmaNAS® 14.4.0.5 - Ingsley
+----------------------------
+Changes:
+- Upgrade underlying OS to 14.4-RELEASE P5.
+- Upgrade bash to v5.3p12.
+- Upgrade dmidecode to v3.7.
+- Upgrade e2fsprogs to v1.47.4.
+- Upgrade iperf3 to v3.21.
+- Upgrade open-vm-tools to v13.0.10.
+- Upgrade virtualbox-ose to 7.2.8.
+- Upgrade phpvirtualbox to 7.2-3.
+- Upgrade microcode amd to v20251202.
+- Upgrade microcode intel to v20260512.
+- Upgrade nano to v9.0.
+- Upgrade netatalk to v4.4.3.
+- Upgrade nut to v2026.05.25.
+- Upgrade pecl-APCu to v5.1.28.
+- Upgrade php8 to v8.4.22.
+- Upgrade proftpd to v1.3.9b.
+- Upgrade rsync to v3.4.4.
+- Upgrade zoneinfo to v2026b.
+-
+
+New:
+- 
+
+Fixed:
+- 
+
+Permanent restrictions:
+- It is not possible to format a SoftRAID disk with MSDOS FAT16/32.
+- It is not possible to encrypt a disk partition, only complete disks are supported.
+- AFP shares with TimeMachine support are limited to max. 4 shares.
+Known bugs:
+- If DHCP for IPv4 is used, the IPv6 statically configured DNS server will be
+  overriden by the IPv4 DNS server.
+
+NEED TESTING:
+- IPv6: auto mode.
+- All services using IPv6 address. (NFS, FTP, etc...)
+- Netatalk VFS Samba module (automatically enabled when Netatalk starts) crashes
+  samba when accessing to share.
+- Need to write an online-test procedure.
+
+Help needed:
+- Need help for adding LDAP authentication feature:
+  Main services can be easily authenticated using PAM-LDAP, but is harder for Samba.
+
